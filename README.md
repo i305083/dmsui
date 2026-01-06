@@ -1,3 +1,7 @@
+# Document Management Admin UI with SAP BTP
+ - Using Document Management Service, Integration Option in the SAP BTP ABAP Environment
+
+   
 [Integrating SAP BTP Document Management Service UI in the Fiori App](https://community.sap.com/t5/technology-blog-posts-by-members/integrating-sap-btp-document-management-service-ui-in-the-fiori-app/ba-p/13460730)
 
 [SAP Document Management Service](https://help.sap.com/docs/document-management-service/sap-document-management-service/what-is-document-management-service)
@@ -85,6 +89,7 @@ service url endpoints.ecmservice.url/rest/v2/repositories
 ![Integrating SAP BTP Document Management Service UI in the Fiori App]( ./images/image16.png)
 
  - Provide preview and other functions for the documents.
+
 
 ![Integrating SAP BTP Document Management Service UI in the Fiori App]( ./images/image17.png)
 
