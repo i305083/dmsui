@@ -1,0 +1,121 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "ui5",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.0",
+      "toolsId": "cfa15c48-dba7-46d2-b21f-9e090f97f6f1"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.143.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ui5.view",
+        "async": true,
+        "viewPath": "ui5.view"
+      },
+      "routes": [
+        {
+          "name": "RouteView",
+          "pattern": ":?query:",
+          "target": [
+            "RootFolder"
+          ]
+        },
+        {
+          "name": "WebLink",
+          "pattern": "/documents/v1/open/rep=61fb98b1-db80-4295-b63e-740fe93d0326&obj={objectId}&vs={vsId}",
+          "target": [
+            "TargetFolder"
+          ]
+        }
+      ],
+      "targets": {
+        "RootFolder": {
+          "id": "View",
+          "name": "View"
+        },        
+        "TargetFolder": {
+          "id": "TargetView",
+          "name": "TargetView"
+        }
+      }
+    },
+    "componentUsages": {
+      "documentTable": {
+        "name": "com.sap.ecm.reuse.documentTable",
+        "settings": {
+          "destinationPath": "/comsapecmreuse.comsapecmreusedocumentTable/api",
+          "hideUrl": false
+        }
+      }
+    },
+    "resourceRoots": {
+      "com.sap.ecm.reuse.documentTable": "./../comsapecmreuse.comsapecmreusedocumentTable/"
+    },
+    "rootView": {
+      "viewName": "ui5.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
